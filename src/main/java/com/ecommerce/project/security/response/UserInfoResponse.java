@@ -4,8 +4,6 @@ import java.util.List;
 
 public class UserInfoResponse {
     private Long id;
-    private String jwtToken;
-
     private String username;
     private List<String> roles;
 
@@ -13,7 +11,12 @@ public class UserInfoResponse {
         this.id = id;
         this.username = username;
         this.roles = roles;
-        this.jwtToken = jwtToken;
+    }
+
+    public UserInfoResponse(Long id, String username, List<String> roles) {
+        this.id=id;
+        this.username=username;
+        this.roles=roles;
     }
 
     public Long getId() {
@@ -24,13 +27,6 @@ public class UserInfoResponse {
         this.id = id;
     }
 
-    public String getJwtToken() {
-        return jwtToken;
-    }
-
-    public void setJwtToken(String jwtToken) {
-        this.jwtToken = jwtToken;
-    }
 
     public String getUsername() {
         return username;
